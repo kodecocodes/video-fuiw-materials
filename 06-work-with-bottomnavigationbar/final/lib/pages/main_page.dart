@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_widgets/pages/home_page.dart';
-import 'package:flutter_ui_widgets/pages/inbox_page.dart';
+import 'inbox_page.dart';
+import 'home_page.dart';
 
 class MainPage extends StatefulWidget {
+  const MainPage({Key? key}) : super(key: key);
+
   @override
-  _MainPageState createState() => _MainPageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
   final List<Widget> _pages = [
-    HomePage(),
-    InboxPage(),
+    const HomePage(),
+    const InboxPage(),
   ];
 
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
 
-  _onTapped(int index) {
+  void _onTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -26,33 +28,33 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-          "assets/images/logo.png",
+          'assets/images/logo.png',
           width: 180,
         ),
       ),
       body: IndexedStack(
         index: _selectedIndex,
-        children: <Widget>[..._pages],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("Clicked");
-        },
-        child: Icon(Icons.add),
+        children: [..._pages],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onTapped,
         items: [
-          BottomNavigationBarItem(
-            title: Text("Home"),
+          const BottomNavigationBarItem(
+            label: 'Home',
             icon: Icon(Icons.home),
           ),
-          BottomNavigationBarItem(
-            title: Text("Inbox"),
+          const BottomNavigationBarItem(
+            label: 'Inbox',
             icon: Icon(Icons.mail),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('Clicked');
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }

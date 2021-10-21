@@ -1,27 +1,29 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../models/message.dart';
 
 class InboxPage extends StatelessWidget {
+  const InboxPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        ListTile(
-          leading: CircleAvatar(),
-          title: Text("Burna Boy"),
+    return ListView.builder(
+      itemCount: messages.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          onTap: () {},
+          leading: const CircleAvatar(),
+          title: Text(
+            messages[index].author,
+          ),
           subtitle: Text(
-            "I don’t really know what a hit battle is but I’m willing to go toe to toe with ANY worthy challenger.",
+            messages[index].content,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          trailing: Text("02:05 PM"),
-        ),
-        ListTile(
-          leading: CircleAvatar(),
-          title: Text("Reekado Banks"),
-          subtitle: Text("I’m game that energy let’s get it"),
-          trailing: Text("05:59 PM"),
-        ),
-      ],
+          trailing: Text(messages[index].sentTime),
+        );
+      },
     );
   }
 }

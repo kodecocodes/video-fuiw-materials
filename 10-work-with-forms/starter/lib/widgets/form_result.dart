@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_widgets/utils/strings.dart';
+import '../models/form_data.dart';
+import '../utils/strings.dart';
 
 class FormResult extends StatelessWidget {
-  final Map<String, dynamic> result;
+  final FormData? data;
 
-  const FormResult({Key key, this.result}) : super(key: key);
+  const FormResult({Key? key, this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final result = data!.toJson();
+    print(result);
+    return SizedBox(
       width: 300,
       height: 300,
       child: ListView.builder(
         itemCount: result.length,
         itemBuilder: (BuildContext context, int index) {
-          String key = result.keys.elementAt(index);
-          String title = camelCaseToTitle(key);
-          return new Column(
+          final key = result.keys.elementAt(index);
+          final title = camelCaseToTitle(key);
+          return Column(
             children: <Widget>[
-              new ListTile(
-                title: new Text("$title"),
-                subtitle: new Text("${result[key]}"),
+              ListTile(
+                title: Text('$title'),
+                subtitle: Text('${result[key]}'),
               ),
-              new Divider(
+              const Divider(
                 height: 2.0,
               ),
             ],

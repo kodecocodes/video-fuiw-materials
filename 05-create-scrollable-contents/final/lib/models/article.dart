@@ -9,61 +9,87 @@ class Article {
   String content;
 
   Article({
-    this.source,
-    this.author,
-    this.title,
-    this.description,
-    this.url,
-    this.urlToImage,
-    this.publishedAt,
-    this.content,
+    required this.source,
+    required this.author,
+    required this.title,
+    required this.description,
+    required this.url,
+    required this.urlToImage,
+    required this.publishedAt,
+    required this.content,
   });
 }
 
 List<Article> articles = [
   Article(
-    source: "The Verge",
-    author: "Cameron Faulkner",
-    title:
-        "Samsung announces six new midrange Galaxy A-series phones - The Verge",
+    source: 'Engadget',
+    author: 'Mat Smith,Daniel Cooper',
+    title: '''The Morning After: Meet the new iPhone 13''',
     description:
-        "Samsung’s Galaxy A-series midrange phones for 2020 start at \$110 for the A01. There are six models in total, and at the top, flagship features like 5G connectivity will come this summer with the A51 5G, which costs \$500.",
+        '''Yes, Apple is calling its newest iPhones the iPhone 13 series. Unlucky numbers, be damned. We’re getting four new devices, from the 5.4-inch iPhone 13 mini through to the 6.7-inch iPhone 13 Pro Max. Apple also revealed a long-time-coming iPad mini, which look…''',
     url:
-        "https://www.theverge.com/2020/4/8/21212085/samsung-galaxy-a01-a11-a21-a51-a71-5g-mid-range-android-price-release-date",
+        'https://www.engadget.com/the-morning-after-iphone-13-apple-111502073.html',
     urlToImage:
-        "https://cdn.vox-cdn.com/thumbor/jjus6vYLTcTKh3agpIviEYwKeKM=/0x103:1440x857/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19882556/galaxya51hero2.jpg",
-    publishedAt: "2020-04-08T13:19:07Z",
+        'https://s.yimg.com/os/creatr-uploaded-images/2021-09/a1049550-1611-11ec-bef3-b6a3486b5957',
+    publishedAt: '2021-09-15T11:15:02Z',
     content:
-        "It has six new Galaxy A-series phones in total\r\nSamsung\r\nSamsung is refreshing its Galaxy A-series midrange phones for 2020. The lineup consists of a whopping six phones, all of which are aimed at people who want high-end features without paying an exorbitant… [+4504 chars]",
+        '''Yes, Apple is calling its newest iPhones the iPhone 13 series. Unlucky numbers, be damned. Were getting four new devices, from the 5.4-inch iPhone 13 mini through to the 6.7-inch iPhone 13 Pro Max. A… [+6279 chars]''',
   ),
   Article(
-    source: "Ars Technica",
-    author: "Dan Goodin",
+    source: 'The Wall Street Journal',
+    author: 'AnnaMaria Andriotis',
     title:
-        "Attackers can bypass fingerprint authentication with an ~80% success rate - Ars Technica",
+        '''Amazon Is Doing It. So Is Walmart. Why Retail Loves ‘Buy Now, Pay Later.’ - The Wall Street Journal''',
     description:
-        "Fingerprint-based authentication is fine for most people, but it's hardly foolproof.",
+        '''Alexis Luedtke got her first buy now, pay later plan in 2019 after she was rejected for a credit card. She has used at least five more since to buy face cream, T-shirts and birthday gifts.\r\nInstallme...''',
     url:
-        "https://arstechnica.com/information-technology/2020/04/attackers-can-bypass-fingerprint-authentication-with-an-80-success-rate/",
-    urlToImage:
-        "https://cdn.arstechnica.net/wp-content/uploads/2020/04/fingerprint-sensor-760x380.jpg",
-    publishedAt: "2020-04-08T13:00:00Z",
+        'https://www.wsj.com/articles/amazon-is-doing-it-so-is-walmart-why-retail-loves-buy-now-pay-later-11631784601',
+    urlToImage: 'https://images.wsj.net/im-401784/social',
+    publishedAt: '2021-09-16T09:30:00Z',
     content:
-        "45 with 34 posters participating, including story author\r\nFor decades, the use of fingerprints to authenticate users to computers, networks, and restricted areas was (with a few notable exceptions) mostly limited to large and well-resourced organizations that… [+9834 chars]",
+        '''Alexis Luedtke got her first buy now, pay later plan in 2019 after she was rejected for a credit card. She has used at least five more since to buy face cream, T-shirts and birthday gifts.\r\nInstallme… [+313 chars]''',
   ),
   Article(
-    source: "CNBC",
-    author: "Thomas Franck",
+    source: 'TechCrunch',
+    author: 'Sarah Perez',
     title:
-        "Treasury Secretary Mnuchin says the government won't run out of money for small businesses - CNBC",
+        'Tile secures \$40 million to take on Apple AirTag with new products',
     description:
-        "\"I want to assure all small businesses out there: We will not run out of money,\" Mnuchin said. He's confident Congress will OK more funds.",
+        '''Tile, the maker of Bluetooth-powered lost item finder beacons and, more recently, a staunch Apple critic, announced today it has raised \$40 million in non-dilutive debt financing from Capital IP. The funding will be put towards investment in Tile’s finding te…''',
     url:
-        "https://www.cnbc.com/2020/04/08/treasury-secretary-mnuchin-says-the-government-wont-run-out-of-money-for-small-businesses.html",
+        'https://techcrunch.com/2021/09/16/tile-secures-another-40-million-to-take-on-apple-airtag-with-new-products/',
     urlToImage:
-        "https://image.cnbcfm.com/api/v1/image/106472676-1585867141819rts37yvg.jpg?v=1585867240",
-    publishedAt: "2020-04-08T14:30:55Z",
+        'https://techcrunch.com/wp-content/uploads/2021/09/Pro-on-Gym-Bag.jpg?w=600',
+    publishedAt: '2021-09-16T12:59:05Z',
     content:
-        "Treasury Secretary Steven Mnuchin told CNBC on Wednesday that small businesses throughout the U.S. should not worry about their odds of receiving relief funding from the federal government.\r\nAsked by CNBC's Jim Cramer about the White House's work with the Sma… [+1994 chars]",
+        '''Tile, the maker of Bluetooth-powered lost item finder beacons and, more recently, a staunch Apple critic, announced today it has raised \$40 million in non-dilutive debt financing from Capital IP. The… [+6127 chars]''',
+  ),
+  Article(
+    source: 'The Verge',
+    author: 'Tom Warren',
+    title: 'Microsoft accounts can now go fully passwordless',
+    description:
+        '''Microsoft is rolling out a fully passwordless option for Microsoft accounts. It will allow consumers to remove their password and authenticate using an app, security keys, Windows Hello, or SMS / email codes.''',
+    url:
+        'https://www.theverge.com/2021/9/15/22675175/microsoft-account-passwordless-no-password-security-feature',
+    urlToImage:
+        'https://cdn.vox-cdn.com/thumbor/S_18fWe_G-e-upqhKGFIalepagA=/0x95:1320x786/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22174342/microsoftauthenticator.jpg',
+    publishedAt: '2021-09-15T13:00:00Z',
+    content:
+        '''You can delete your Microsoft account password\r\nIf you buy something from a Verge link, Vox Media may earn a commission. See our ethics statement.\r\nYou no longer need a password for a Microsoft accou… [+2931 chars]''',
+  ),
+  Article(
+    source: 'TechCrunch',
+    author: 'Gary M. Shiffman',
+    title: '''Ransomware: A market problem deserves a market solution''',
+    description:
+        '''To fight ransomware attacks, appreciate the economics — the markets that enable ransomware — and change the market dynamics.''',
+    url:
+        'https://techcrunch.com/2021/09/16/ransomware-a-market-problem-that-deserves-a-market-solution/',
+    urlToImage:
+        'https://techcrunch.com/wp-content/uploads/2021/09/GettyImages-1284232947.jpg?w=589',
+    publishedAt: '2021-09-16T13:12:43Z',
+    content:
+        '''REvil is a solid choice for a villains name: R Evil. Revil. Evil and yet fun. I could imagine Black Widow, Hulk and Spider-Man teaming up to topple the leadership of REvil Incorporated.\r\nThe criminal… [+5341 chars]''',
   ),
 ];
